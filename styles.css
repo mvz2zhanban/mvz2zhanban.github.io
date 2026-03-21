@@ -1,0 +1,60 @@
+p {
+    color: white;
+    text-align: center;
+}
+small {
+    text-align: center;
+}
+a{
+    color: white;
+}
+.choose {
+    color: green;
+    text-align: center;
+}
+.middlea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: greenyellow;
+    text-align: center;
+}
+h3 {
+    color: cyan;
+    text-align: center;
+}
+.img-center {
+    z-index: -1;
+    display: block;
+    margin:0 auto;
+}
+iframe {
+    display: block;
+    margin:0 auto;
+}
+.rectangle-back{
+    width: 850px;
+    height: 9999999999999px;
+    overflow:hidden;
+    background-color: darkred;
+    z-index: -1;
+    position: fixed;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.behind-back{
+    width: 9999999999999px;
+    height: 9999999999999px;
+    overflow:hidden;
+    background-color: black;
+    z-index: -1;
+    position: fixed;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
