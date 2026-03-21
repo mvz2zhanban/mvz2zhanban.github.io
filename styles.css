@@ -21,8 +21,16 @@ h1 {
     color: greenyellow;
     text-align: center;
 }
+h2 {
+    color: cyan;
+    text-align: center;
+}
 h3 {
     color: cyan;
+    text-align: center;
+}
+h4 {
+    color: lightblue;
     text-align: center;
 }
 .img-center {
