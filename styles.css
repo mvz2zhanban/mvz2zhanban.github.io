@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 p {
     color: white;
     text-align: center;
