@@ -31,11 +31,26 @@
         <label for="email_addr">在此输入邮箱: </label>
         <input type="text" id="email_addr" name="email_addr">
     </p>
-    <p id="result"></p>
+    <p id="result">&nbsp;</p>
     <a class="middlea" href="./email.html" onclick="submit(event)">点击此处提交</a>
 </body>
 <script>
     const random_words = [
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
         "ERROR: CANNOT CONNECT TO THE SERVER",
         "ERROR: CANNOT CONNECT TO THE SERVER",
         "ERROR: CANNOT CONNECT TO THE SERVER",
@@ -93,7 +108,7 @@
         const inputLen = inputValue.length;
         const result = document.getElementById('result');
         // If a random condition is met, show a random word
-        if (Math.random() < 0.7) {  // 70% chance to show a random word
+        if (Math.random() < 0.75) {  // 75% chance to show a random word
             const randomIndex = Math.floor(Math.random() * random_words.length);
             result.textContent = random_words[randomIndex];
         } else {
