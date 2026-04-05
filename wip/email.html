@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MVZ二战版官网邮件订阅服务</title>
+    <link rel="icon" href="../image/title.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="behind-back"></div>
+    <div class="rectangle-back"></div>
+    <img class="img-center" src="../image/logo.jpg" alt="MVZ二战版LOGO" width="981.8" height="561.8">
+    <p class="choose">
+        <a href="../index.html">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../speedrun.html">速通排行榜</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../ost.html">OST</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../save_update.html">存档开发日志</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../mod_update.html">模组开发日志</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ■■■■■■■■■■■
+    </p>
+    <h1>邮件订阅服务!</h1>
+    <p>不想错过最新消息?那为什么不使用我们的订阅服务呢!?</p>
+    <p>觉得QQ交流群消息太多? 找不到自己想要的信息?</p>
+    <p>一旦有最新消息, 您便会立刻收到邮件! 连QQ都不用开!</p>
+    <h3>订阅流程</h3>
+    <p>十分简单!只需要在下框里输入你的邮箱!我们就可以会给你发送一封邮件!</p>
+    <p>收到邮件以后, 点击邮件里的按钮来认证邮箱!</p>
+    <p>
+        <label for="email_addr">在此输入邮箱: </label>
+        <input type="text" id="email_addr" name="email_addr">
+    </p>
+    <p id="result"></p>
+    <a class="middlea" href="./email.html" onclick="submit(event)">点击此处提交</a>
+</body>
+<script>
+    const random_words = [
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "ERROR: CANNOT CONNECT TO THE SERVER",
+        "■■■■■■■■■■",
+        "asfsdgfdhfhsgfh",
+        "速通",
+        "MVZ2战版官网",
+        "■■",
+        "赖阿包55",
+        "清风",
+        "黑夜",
+        "物■作",
+        "师, 一切的领",
+        "■权限■足, ■■对",
+        "想要解决, 必■■■■",
+        "侵权, 原作者说",
+        "旦有最新消息■■便会立刻收到",
+        "需要在■■输入",
+        "萝卜火■■, 但仍未搞清如何",
+        "乐包已通过审核, 已■■",
+        "if not jump pr■■■,<a href='speedru",
+        "■■■■■■■■■■全部通关 <a href='../../single_chap■■ter/chapter1/index.html'>单章节速通</a>单个关卡速通(暂不支持)",
+        "加新植物：■■■■、胡萝卜火箭炮、电",
+        "关地图出现问题的bug, 玩家",
+        "顿■■■■强渡 - B站南瓜",
+        "海战 - B站",
+        "nGrain■■s(Remix) - B",
+        "导入, 模",
+        "PASSWORD: dasiy1997",
+    ];
+    function isValidEmail(inputValue) {
+        // Regular expression to match a basic email pattern
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Test if the input matches the pattern
+        return emailPattern.test(inputValue);
+    }
+    function submit(event) {
+        event.preventDefault(); // Prevent the default action (navigation)
+        const inputElement = document.getElementById('email_addr');
+        const randomDecimal = Math.random();
+        console.log(randomDecimal);
+        // Get the value of the input
+        const inputValue = inputElement.value;
+        const inputLen = inputValue.length;
+        const result = document.getElementById('result');
+        // If a random condition is met, show a random word
+        if (Math.random() < 0.7) {  // 70% chance to show a random word
+            const randomIndex = Math.floor(Math.random() * random_words.length);
+            result.textContent = random_words[randomIndex];
+        } else {
+            if (inputLen == 0) {
+                result.textContent = "请输入邮箱地址!";
+                console.log("ERROR EMPTY INPUT");
+            } else if (!isValidEmail(inputValue)) {
+                result.textContent = "不是可用的邮箱地址!";
+            } else {
+                result.textContent = "已收到邮箱地址! 将会尽快处理";
+            }
+        }
+    }
+</script>
+
+</html>
