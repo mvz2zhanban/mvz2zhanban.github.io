@@ -1,7 +1,9 @@
 body {
   overflow-x: hidden;
 }
-
+.easter_egg{
+    color:black
+}
 p {
     color: white;
     text-align: center;
