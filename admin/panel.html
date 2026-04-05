@@ -53,6 +53,20 @@
             <a href="" onclick="confirm_delete(event)">CONFIRM</a>
             <p id="result_shut"></p>
         </div>
+        <a href="" style="color: white;" onclick="display_hidden_text(event)">.</a>
+        <div style="display: none;" id="DIV_HIDDEN_TEXT">
+            <p>DO YOU THINK HE CAN GET HERE?</p>
+            <p>NO, THIS PLACE IS BASICLLY HIDDEN FOR THAT TECH DUMB.</p>
+            <p>OKAY, MAYBE...</p>
+            <p>I GUESS THIS IS THE NOST USEFUL PROGRAM I EVER CREATED, ISN'T IT?</p>
+            <p>IT SURE IS. ALSO, DID YOU SEE THAT NEW WEIRDO?</p>
+            <p>WHAT'S WRONG WITH THAT GUY? HE'S KINDA NICE!</p>
+            <p>ONCE I SAW SOMETHING ON HIS SCREEN, I CAN'T FIGURE WHAT THE HELL THAT IS. BUT THAT'S KINDA STRANGE.IT FEELS LIKE HACKER'S THING.</p>
+            <p>HACKER? I HAVE NO IDEA WHAT THAT IS. I AM JUST A JAVASCRIPT PROGRAMMER</p>
+            <p>KINDA, COOL, I GUESS. BUT THAT IS NOT THE POINT, THEN, I SAW HIM PRESS I A FEW BUTTONS AND IT POPS OUT A WINDOW, I DOESN'T LOOK LIKE ANYTHING WE ARE USING NOW, I MORE LOOK LIKE A GAME OR SOMETHING</p>
+            <p>GAME? IS HE SLACKING OFF AT WORK? SHOULD WE REPORT HIM?</p>
+            <p>I DON'T KNOW! LET'S JUST STAY AWAY FROM THESE GARBAGES</p>
+        </div>
     </div>
 </body>
 <script>
@@ -75,6 +89,10 @@
     const a = Math.floor(Math.random() * words_which_encourage.length);
     console.log(a);
     encouragements_element.textContent = words_which_encourage[a];
+    function display_hidden_text(event){
+        event.preventDefault(); // Prevent the default action (navigation)
+        document.getElementById('DIV_HIDDEN_TEXT').style.display = 'block';
+    }
     function display_shut_down(event) {
         event.preventDefault(); // Prevent the default action (navigation)
         document.getElementById('SHUT_DOWN_DIV').style.display = 'block';
