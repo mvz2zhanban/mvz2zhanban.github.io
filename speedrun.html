@@ -16,5 +16,17 @@
     <p>毕竟我也是好了很长时间才做出来的, 你知道</p>
     <p>而且我是手写html, 希望大家能多提供帮助。</p>
     <p>我们也是很累的!</p>
+    <p>注: 本页面只显示一次, 下次将不再显示</p>
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const key = "mvz2_speedrun_jump_seen";
+
+    if (localStorage.getItem(key)) {
+        window.location.href = "speedrun/full_run/no_skip/index.html";
+    } else {
+        localStorage.setItem(key, "1");
+    }
+});
+</script>
 </html>
