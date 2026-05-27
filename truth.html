@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="description" content="MVZ二战版官方网站, 植物大战僵尸改版地图, 包含速通排行榜、OST音乐、模组与开发日志。">
+    <meta name="keywords" content="MVZ二战版,植物大战僵尸,mc地图,速通,OST,模组,mod,minecraft">
+</head>
+<body>
+    <div id="time">
+        <p>truth is not ready</p>
+        <p id="time_is_not_much"></p>
+    </div>
+    <div id="wait_is_worthless">
+        <h1>Well, you are on time</h1>
+        <p>*sigh*</p>
+        <p>Looking for truth, eh?</p>
+        <p>Well, there is not a real truth at all</p>
+        <p>everybody is lying, include me</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>What?</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="./backup/2026/5/5/document.html">.</a>
+    </div>
+</body>
+<script>
+    const wait = document.getElementById('time_is_not_much');
+    function getRemainingSeconds() {
+        const now = new Date();
+        const target = new Date(now.getFullYear(), 11, 25);
+        
+        if (now > target) {
+            target.setFullYear(now.getFullYear() + 1);
+        }
+        
+        const remainingSeconds = Math.floor((target - now) / 1000);
+        const isTruthDay = now.getMonth() === 11 && now.getDate() === 25;
+
+        const hiddenDiv = document.getElementById('wait_is_worthless');
+        const notReady = document.getElementById('time');
+
+        if (isTruthDay) {
+            hiddenDiv.style.display = 'block';
+            notReady.style.display = 'none';
+        } else {
+            hiddenDiv.style.display = 'none';
+            notReady.style.display = 'block';
+        }
+        return remainingSeconds;
+    }
+
+    wait.textContent = getRemainingSeconds() + "s";
+
+    setInterval(() => {
+        wait.textContent = getRemainingSeconds() + "s";
+    }, 1000);
+</script>
+</html>
